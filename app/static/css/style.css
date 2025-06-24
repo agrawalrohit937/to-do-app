@@ -1,3 +1,4 @@
+/* Global settings */
 body {
     margin: 0;
     background: #f8f9fa;
@@ -5,11 +6,10 @@ body {
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
     padding: 20px;
 }
 
+/* Header */
 header {
     background: linear-gradient(to right, #0062E6, #33AeFF);
     color: white;
@@ -41,6 +41,7 @@ nav a:hover {
     color: #ffd700;
 }
 
+/* Footer */
 footer {
     background-color: #343a40;
     color: #ccc;
@@ -75,41 +76,7 @@ footer p {
     margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: flex;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    margin-bottom: 6px;
-}
-
-.btn {
-    background-color: #007dff;
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
+/* Task container */
 .task-box {
     max-width: 800px;
     margin: 40px auto;
@@ -119,25 +86,12 @@ footer p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Task form */
 .task-form {
-    display: flex;
-    gap: 10px;
     margin-bottom: 25px;
 }
 
-.task-form input[type="text"] {
-    flex: 1;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.task-form .btn {
-    padding: 12px 20px;
-    font-size: 16px;
-}
-
+/* Table */
 .task-table {
     width: 100%;
     border-collapse: collapse;
@@ -154,6 +108,22 @@ footer p {
     background-color: #f2f2f2;
 }
 
+/* Buttons */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Delete button */
 .btn-delete {
     background-color: #dc3545;
     color: white;
@@ -164,44 +134,42 @@ footer p {
     border: none;
     cursor: pointer;
 }
-
 .btn-delete:hover {
-    background-color: #c82333;
+    background-color: #bb2d3b;
 }
 
-.badge {
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: bold;
+.btn-danger{
+    background-color: #dc3545;
     color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
-.badge.pending {
-    background-color: #ffc107;
+.btn-danger:hover {
+    background-color: #bb2d3b;
 }
 
-.badge.working {
-    background-color: #17a2b8;
-}
-
-.badge.done {
-    background-color: #28a745;
-}
-
-.btn-small {
+/* Change/Next button */
+.btn-secondary{
     font-size: 12px;
     padding: 6px 12px;
-    border: none;
     background-color: #6c757d;
     color: white;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.btn-small:hover {
+
+.btn-secondary:hover {
     background-color: #495057;
 }
 
+/* Clear button */
 .btn-clear {
     background-color: #dc3545;
     margin-bottom: 10px;
@@ -211,12 +179,29 @@ footer p {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .btn-clear:hover {
     background-color: #c82333;
 }
 
+/* Status Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+.badge.pending {
+    background-color: #ffc107;
+    color: black;
+}
+.badge.working {
+    background-color: #17a2b8;
+}
+.badge.done {
+    background-color: #28a745;
+}
 
+/* Time input */
 input[type="time"] {
     padding: 12px;
     font-size: 16px;
@@ -227,43 +212,22 @@ input[type="time"] {
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
     transition: border 0.3s, box-shadow 0.3s;
 }
-
 input[type="time"]:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 4px rgba(0,123,255,0.5);
 }
 
-
-.task-form input[type="text"] {
-    flex: 2;
-}
-
-.task-form input[type="time"] {
-    flex: 2;
-    max-width: 10px;
-    padding: 10px;
-    font-size: 15px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-
-.task-form button:hover {
-    background-color: #0056b3;
-}
-
+/* Flatpickr */
 .flatpickr-calendar {
-    width: 150px !important;   /* reduce from default ~300px */
+    width: 150px !important;
     font-size: 14px;
 }
-
 .flatpickr-time {
     padding: 5px;
 }
-
 .flatpickr-time input {
-    width: 40px;    /* make hour/minute boxes smaller */
+    width: 40px;
     text-align: center;
     font-size: 14px;
 }
@@ -277,23 +241,19 @@ input[type="time"]:focus {
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-
 .form-box h2 {
     text-align: center;
     margin-bottom: 20px;
     font-weight: 600;
 }
-
 .form-group {
     margin-bottom: 15px;
 }
-
 .form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
-
 .form-group input {
     width: 100%;
     padding: 8px 10px;
@@ -302,25 +262,62 @@ input[type="time"]:focus {
     border-radius: 6px;
 }
 
-.btn {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.btn.full-width {
-    width: 100%;
-}
-
 .switch-auth {
     margin-top: 15px;
     text-align: center;
     font-size: 14px;
 }
 
+/* Responsive Table for Small Screens */
+@media (max-width: 768px) {
+    .task-form .form-control,
+    .task-form .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .task-table thead {
+        display: none;
+    }
+
+    .task-table, .task-table tbody, .task-table tr, .task-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .task-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .task-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .task-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+        width: 45%;
+        padding-right: 10px;
+    }
+
+    .btn-small, .btn-delete, .btn-clear {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
